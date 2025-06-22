@@ -170,6 +170,11 @@ nav ul li a:hover {
 .inone ul li {
   padding-right: 5rem;
 }
+.inone div {
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
 .two,
 .three,
 .four {
