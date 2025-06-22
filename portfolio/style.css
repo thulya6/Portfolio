@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgb(0, 0, 33);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+body.light-theme {
+  background-color: beige;
+  color: black;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: rgb(12, 12, 63);
+}
+body.light-theme nav {
+  background-color: lightgray;
+  color: black;
+}
+body.light-theme nav ul li a {
+  color: black;
+}
+.theme-toggle {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  list-style: none;
+  margin: 0 23px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+nav ul li a:hover {
+  color: cadetblue;
+  font-size: 1.09rem;
+}
+.left {
+  font-size: 1.5rem;
+}
+.firstsection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 120px 0;
+}
+.firstsection > div {
+  width: 30%;
+}
+.leftsection {
+  font-size: 3rem;
+}
+.rightsection img {
+  width: 80%;
+}
+.name {
+  color: blueviolet;
+}
+#element {
+  color: blueviolet;
+}
+.secondsection {
+  align-items: center;
+  margin: 70px 50px;
+  padding: 0 40px;
+}
+.heading {
+  font-size: 50px;
+  padding: 20px 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.edu {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(16px, 2vw, 24px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.branch {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(12px, 1vw, 20px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.leftsecond {
+  width: 30%;
+}
+.rightsecond {
+  width: 30%;
+  font-size: clamp(10px, 0.7vw, 18px);
+  align-items: center;
+  display: flex;
+}
+.thirdsection {
+  align-items: center;
+  margin: 60px 50px;
+  padding: 0 40px;
+}
+.thirdsection h1 img {
+  height: 0.7em;
+}
+.one {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.inone {
+  font-size: 1rem;
+  padding: 30px 0;
+  font-weight: 400;
+}
+.imgtext {
+  display: flex;
+  align-items: center;
+}
+.image {
+  height: 1.55em;
+  width: auto;
+  margin-right: 5px;
+  margin-left: 3px;
+}
+.image1 {
+  height: 1em;
+  width: auto;
+  margin-right: 5px;
+  margin-left: 3px;
+}
+.image2 {
+  height: 1em;
+  width: auto;
+  margin-right: 5px;
+  margin-left: 3px;
+}
+.inone ul {
+  display: flex;
+  list-style-type: none;
+}
+.inone ul li {
+  padding-right: 5rem;
+}
+.two,
+.three,
+.four {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.intwo,
+.inthree,
+.infour {
+  font-size: 1rem;
+  padding: 30px 0;
+  font-weight: 400;
+}
+.intwo ul {
+  display: flex;
+  list-style-type: none;
+}
+.intwo ul li {
+  padding-right: 5rem;
+}
+.intwo div {
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.inthree div {
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.infour div {
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.inthree ul {
+  display: flex;
+  list-style-type: none;
+}
+.infour ul {
+  display: flex;
+  list-style-type: none;
+}
+.inthree ul li {
+  padding-right: 5rem;
+}
+.infour ul li {
+  padding-right: 5rem;
+}
+.fourthsection {
+  align-items: center;
+  margin: 60px 50px;
+  padding: 0 40px;
+}
+.fourthsection h1 img {
+  height: 1em;
+  vertical-align: middle;
+}
+.intern {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.fourthsection div {
+  padding: 10px 0;
+}
+.fifthsection {
+  align-items: center;
+  margin: 60px 50px;
+  padding: 0 40px;
+}
+.tech span {
+  font-weight: bold;
+}
+.tech {
+  padding: 5px 0;
+}
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  vertical-align: middle;
+}
+.skill-icon:hover {
+  width: 44px;
+  height: 44px;
+}
+.rotating {
+  animation: spin 5s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.sixthsection {
+  align-items: center;
+  margin: 60px 50px;
+  padding: 0 40px;
+}
+.sixthsection ul {
+  list-style-type: none;
+}
+.sixthsection ul li {
+  padding: 5px 0;
+}
+.sixthsection ul li a {
+  color: white;
+}
+.sixthsection ul li img {
+  vertical-align: middle;
+}
+.seventhsection {
+  align-items: center;
+  margin: 60px 50px;
+  padding: 0 40px;
+}
+.seventhsection ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.seventhsection ul li {
+  padding: 5px 0;
+  padding-right: 4rem;
+}
+.seventhsection ul li a {
+  color: white;
+}
+.seventhsection ul li a:hover {
+  color: cadetblue;
+  font-size: 1.2em;
+}
+body.light-theme .seventhsection ul li a {
+  color: black;
+}
+.eigthsection {
+  align-items: center;
+  margin: 60px 50px;
+  padding: 0 40px;
+}
+.eigthsection ul {
+  list-style-type: disc;
+}
+.eigthsection ul li {
+  padding: 5px 0;
+}
+.eigthsection h1 img {
+  height: 1em;
+  vertical-align: middle;
+}
+main hr {
+  border: 0;
+  height: 1px;
+  background-color: rgb(164, 80, 244);
+  margin: 60px 84px;
+}
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(0, 0, 33);
+}
+.item {
+  background: rgb(0, 0, 33);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+.item img {
+  width: 100%;
+  height: auto;
+}
+.certificates img {
+  height: 1em;
+  vertical-align: middle;
+}
+.flip-card {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+.flip-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.item:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background: #292b2c;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-size: 16px;
+}
