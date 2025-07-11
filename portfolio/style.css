@@ -10,7 +10,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 body.light-theme {
-  background: linear-gradient(rgb(255, 255, 208), rgb(251, 222, 222));
+  background: beige;
   color: black;
 }
 nav {
@@ -26,7 +26,7 @@ nav {
   z-index: 10;
 }
 body.light-theme nav {
-  background-color: lightgray;
+  background-color: #5096d3;
   color: black;
 }
 body.light-theme nav ul li a {
@@ -363,7 +363,7 @@ textarea::placeholder {
   color: rgb(170, 168, 168);
 }
 form.message {
-  background: linear-gradient(135deg, #300a44, #360e50, #430c4a);
+  background: linear-gradient(rgb(46, 5, 99), rgb(65, 6, 91), rgb(123, 5, 96));
   flex: 1;
   height: auto;
   display: flex;
@@ -376,7 +376,7 @@ form.message {
   color: white;
 }
 body.light-theme form.message {
-  background: linear-gradient(135deg, #356ba4, #49af74, #90bb3b);
+  background: linear-gradient(135deg, #c491b1, #7ebcda);
   color: black;
 }
 @media screen and (max-width: 768px) {
@@ -414,6 +414,15 @@ main hr {
 .collage {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* background-color: rgb(0, 0, 33); */
+}
+.collage1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   padding: 40px 10px;
   max-width: 1200px;
@@ -466,7 +475,11 @@ main hr {
 }
 
 .flip-card-back {
-  background: #292b2c;
+  background: linear-gradient(
+    rgb(53, 6, 114),
+    rgb(72, 6, 100),
+    rgb(138, 5, 107)
+  );
   color: white;
   transform: rotateY(180deg);
   display: flex;
@@ -474,6 +487,12 @@ main hr {
   justify-content: center;
   padding: 15px;
   font-size: 16px;
+}
+.flip-card-back a {
+  color: aqua;
+}
+.flip-card-back ul {
+  list-style: none;
 }
 .flip-row {
   display: flex;
