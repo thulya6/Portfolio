@@ -16,14 +16,34 @@
     <header>
       <nav>
         <div class="left">Thulyasri's Portfolio</div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
         <div class="right">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-            <li><button id="theme-toggle" class="theme-toggle">🌙</button></li>
+          <ul id="nav-links">
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#education" onclick="closeMenu()">Education</a></li>
+            <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+            <li class="dropdown">
+              <a href="#about" onclick="toggleDropdown(event)">About ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+                <li>
+                  <a href="#achievements" onclick="closeMenu()">Achievements</a>
+                </li>
+                <li>
+                  <a href="#certificates" onclick="closeMenu()">Certificates</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#contact" onclick="closeMenu()">Contact Me</a></li>
+            <li>
+              <button
+                id="theme-toggle"
+                class="theme-toggle"
+                onclick="closeMenu()"
+              >
+                🌙
+              </button>
+            </li>
           </ul>
         </div>
       </nav>
@@ -275,7 +295,7 @@
           understanding of responsive design and user interface development.
         </div>
       </section>
-      <hr />
+      <hr id="skills" />
       <section class="fifthsection">
         <h1 class="heading">Skills</h1>
         <div class="tech">
@@ -373,13 +393,13 @@
         </div>
       </section>
 
-      <hr />
+      <hr id="achievements" />
       <section class="sixthsection">
         <h1 class="heading">Achievements</h1>
         <ul>
           <li>
-            <img class="image1" src="codecheflogo1.jpg" alt="" /><span
-              > 2⭐ in CodeChef - Highest Rating : 1408.</span
+            <img class="image1" src="codecheflogo1.jpg" alt="" /><span>
+              2⭐ in CodeChef - Highest Rating : 1408.</span
             >
           </li>
           <li>
@@ -401,7 +421,7 @@
           </li>
         </ul>
       </section>
-      <hr />
+      <hr id="certificates" />
       <section class="eigthsection">
         <h1 class="heading">
           <img src="cert9.png" alt="" /><span>Certificates</span>
@@ -485,4 +505,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
