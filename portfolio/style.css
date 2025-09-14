@@ -25,6 +25,41 @@ nav {
   background-color: rgb(12, 12, 63);
   z-index: 10;
 }
+nav ul li.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: inherit;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+body.light-theme nav ul li.dropdown .dropdown-menu {
+  background-color: #f0f0f0;
+}
+
+body.light-theme nav ul li.dropdown .dropdown-menu li a {
+  color: black;
+}
+
 body.light-theme nav {
   background-color: #5096d3;
   color: black;
@@ -379,6 +414,16 @@ body.light-theme form.message {
   background: linear-gradient(135deg, #c491b1, #7ebcda);
   color: black;
 }
+@media screen and (min-width: 769px) {
+  .menu-btn {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: -5px;
+  }
+}
 @media screen and (max-width: 768px) {
   .mail {
     align-items: center;
@@ -418,7 +463,6 @@ main hr {
   padding: 40px 10px;
   max-width: 1200px;
   margin: 0 auto;
-  /* background-color: rgb(0, 0, 33); */
 }
 .collage1 {
   display: grid;
@@ -427,10 +471,8 @@ main hr {
   padding: 40px 10px;
   max-width: 1200px;
   margin: 0 auto;
-  /* background-color: rgb(0, 0, 33); */
 }
 .item {
-  /* background: rgb(0, 0, 33); */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
@@ -501,4 +543,175 @@ main hr {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .firstsection {
+    flex-direction: column;
+    margin: 100px 20px;
+  }
+
+  .firstsection > div {
+    width: 80%;
+    text-align: center;
+  }
+
+  .leftsection {
+    font-size: 2rem;
+  }
+
+  .rightsection img {
+    width: 100%;
+  }
+
+  .edu,
+  .branch {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .collage,
+  .collage1 {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .flip-card {
+    height: 220px;
+  }
+
+  .message h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  form.message {
+    width: 100%;
+  }
+  .menu-btn {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: -5px;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50vh;
+    width: 30vw;
+    background: rgb(12, 12, 63);
+    padding-top: 60px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  nav ul li {
+    margin: 15px;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  nav ul li.dropdown.active .dropdown-menu {
+    display: flex;
+    background-color: #1e06bb85;
+  }
+  .dropdown-menu {
+    position: relative;
+    padding-left: 1rem;
+    background-color: #1e06bb85;
+  }
+
+  .dropdown-menu li {
+    padding: 0.5rem 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mail-right img {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    z-index: 20;
+  }
+  nav ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40vw;
+    height: 40vh;
+    background: rgb(12, 12, 63);
+    flex-direction: column;
+    align-items: center;
+    /* gap: 15px; */
+    padding: 20px 0;
+    transition: left 0.3s ease-in-out;
+  }
+
+  nav ul.show {
+    left: 0;
+  }
+
+  .flip-card {
+    height: 180px;
+  }
+
+  nav .left {
+    font-size: 1.2rem;
+  }
+
+  .skill-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  nav ul li.dropdown.active .dropdown-menu {
+    display: flex;
+    background-color: #1e06bb85;
+  }
+  .dropdown-menu {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .dropdown-menu li {
+    padding: 0.5rem 0;
+  }
+}
+
+body.light-theme #nav-links {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+body.light-theme #nav-links li a {
+  color: black;
+}
+
+body.light-theme #nav-links li a:hover {
+  color: #0077cc;
 }
